@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./shhbox-backend
+      dockerfile: Dockerfile
+    container_name: shhbox-backend
+    ports:
+      - "8080:8080"
+    networks:
+      - shhbox-net
+
+  frontend:
+    build:
+      context: ./shhbox-frontend
+    container_name: shhbox-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./shhbox-frontend:/app
+      - /app/node_modules
+    command: npm run dev
+    networks:
+      - shhbox-net
+
+networks:
+  shhbox-net:
