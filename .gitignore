@@ -1,0 +1,31 @@
+
+# Node.js frontend
+/shhbox-frontend/node_modules/
+/shhbox-frontend/dist/
+/shhbox-frontend/.vite/
+/shhbox-frontend/.env
+
+# Java backend
+shhbox-backend/target/
+shhbox-backend/.idea/
+shhbox-backend/*.iml
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VSCODE
+.vscode/
+
+# General
+*.env
+*.class
+*.war
+
+# Other IDE folders
+.idea/
+*.swp
